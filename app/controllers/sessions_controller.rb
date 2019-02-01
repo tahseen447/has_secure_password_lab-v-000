@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     return redirect_to(controller: 'sessions', action: 'new') unless user
     session[:user_id] = user.id
     @user = user
-    redirect_to controller: 'application', action: 'home'
+    redirect_to controller: 'application', action: 'hello'
   end
 
   def destroy
